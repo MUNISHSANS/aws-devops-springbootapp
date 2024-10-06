@@ -7,9 +7,9 @@ phases:
       - aws --version
       #- $(aws ecr get-login --region ap-south-1 --no-include-email)
       # update below 
-      - aws ecr get-logindocker login -aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 487037244797.dkr.ecr.us-east-1.amazonaws.com-username AWS --password-stdin 487037244797.dkr.ecr.us-east-1.amazonaws.com-password --region us-east-1 | docker login --username AWS --password-stdin 549703024737.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 318258387476.dkr.ecr.us-east-1.amazonaws.com
       - # Replace with this to your repository URI
-      - REPOSITORY_URI=docker login --username AWS --password-stdin 487037244797.dkr.ecr.us-east-1.amazonaws.com549703024737.dkr.ecr.us-east-1.amazonaws.com/awsdevopsecr
+      - REPOSITORY_URI=318258387476.dkr.ecr.us-east-1.amazonaws.com/awsdevopsrepository
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
