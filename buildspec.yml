@@ -11,7 +11,7 @@ phases:
       - # Replace with this to your repository URI
       - REPOSITORY URI=106934382682.dkr.ecr.us-east-1.amazonaws.com/awsdevposecr
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
-        build:
+       build:
     commands:
       - echo Build started on `date`
       - echo building the Jar file
